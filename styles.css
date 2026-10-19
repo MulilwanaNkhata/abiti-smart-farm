@@ -305,3 +305,5 @@ a.kpi:hover { border-color: var(--leaf); }
 }
 
 .tab { font-family: var(--f-body); }
+
+[hidden] { display: none !important; }
