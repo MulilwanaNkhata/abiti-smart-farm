@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Abiti Smart Farm</title>
+  <meta name="description" content="Photos from around Abiti Smart Farm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Abiti Smart Farm home"><img src="images/logo.jpg" alt="Abiti Smart Farm logo"></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav id="menu" class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="gallery.html" class="active">Gallery</a><a href="contact.html" class="btn btn-sm">Get in Touch</a></nav>
+  </div>
+</header>
+<section class="page-head" style="--bg-img:url('images/banana-path.jpg')">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Gallery</p>
+    <h1>Gallery</h1>
+    <p>A look around the farm.</p>
+  </div>
+</section>
+<section class="section"><div class="wrap"><div class="gallery"><figure class="g tall"><img src="images/banana-grove.jpg" alt="Farm worker in the banana grove" loading="lazy"></figure><figure class="g "><img src="images/fish-ponds.jpg" alt="Fish ponds" loading="lazy"></figure><figure class="g "><img src="images/pig.jpg" alt="A pig in its pen" loading="lazy"></figure><figure class="g tall"><img src="images/pig-housing.jpg" alt="Pig housing" loading="lazy"></figure><figure class="g "><img src="images/tilled-field.jpg" alt="Tilled field" loading="lazy"></figure><figure class="g "><img src="images/forage.jpg" alt="Dried grass on the field" loading="lazy"></figure><figure class="g tall"><img src="images/banana-path.jpg" alt="Path through the bananas" loading="lazy"></figure><figure class="g tall"><img src="images/pigs.jpg" alt="Two pigs" loading="lazy"></figure></div></div></section>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button aria-label="Close">&times;</button><img alt=""></div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div><img src="images/logo.jpg" alt="Abiti Smart Farm" style="height:72px;margin-bottom:10px"><p>Growing smarter. Feeding the future.</p></div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+      <div><h4>Contact</h4><p>+265 999 000 000<br>info@abitismartfarm.com<br>Malawi</p></div>
+    </div>
+    <div class="footer-inner"><p>&copy; <span id="year"></span> Abiti Smart Farm. All rights reserved.</p><p>Preview draft &bull; sample content</p></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
