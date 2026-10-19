@@ -1,96 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Products | Abiti Smart Farm</title>
-  <meta name="description" content="Fresh fish, pork, bananas and crops from Abiti Smart Farm.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add('js')</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products and Services | Abiti Smart Farm</title>
+<meta name="description" content="Vegetables, field crops, Mikolongwe chicks and incubation services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="brand" aria-label="Abiti Smart Farm home"><img src="images/logo.jpg" alt="Abiti Smart Farm logo"></a>
-    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
-    <nav id="menu" class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html" class="active">Products</a><a href="gallery.html">Gallery</a><a href="contact.html" class="btn btn-sm">Get in Touch</a></nav>
-  </div>
-</header>
-<section class="page-head" style="--bg-img:url('images/fish-ponds.jpg')">
-  <div class="wrap">
-    <p class="crumbs"><a href="index.html">Home</a> / Products</p>
-    <h1>Our Products</h1>
-    <p>Fresh fish, pork, bananas and crops, straight from the farm.</p>
-  </div>
-</section>
-<section class="section"><div class="wrap">
-  <p class="note"><strong>Sample data:</strong> all products and prices below are placeholders for this preview and will be replaced with the farm's real list.</p>
-  <div class="tabs" role="tablist">
-    <button class="tab on" data-filter="all">All</button><button class="tab" data-filter="fish">Fish</button>
-    <button class="tab" data-filter="pork">Pork</button><button class="tab" data-filter="bananas">Bananas</button><button class="tab" data-filter="crops">Crops</button>
-  </div>
-  <div class="products"><article class="product" data-cat="fish">
-  <img src="images/fish-ponds.jpg" alt="Fresh Chambo (Tilapia)" loading="lazy">
-  <div class="pb"><span class="tag">Fish</span><h3>Fresh Chambo (Tilapia)</h3><p>Pond-raised, cleaned on request. Sold whole, fresh on the day.</p>
-  <div class="price"><strong>MWK 9,000</strong><span>per kg</span></div></div>
-</article><article class="product" data-cat="fish">
-  <img src="images/fish-ponds.jpg" alt="Fresh Catfish" loading="lazy">
-  <div class="pb"><span class="tag">Fish</span><h3>Fresh Catfish</h3><p>Hardy, meaty fish raised in our managed ponds.</p>
-  <div class="price"><strong>MWK 6,500</strong><span>per kg</span></div></div>
-</article><article class="product" data-cat="fish">
-  <img src="images/fish-ponds.jpg" alt="Fingerlings" loading="lazy">
-  <div class="pb"><span class="tag">Fish</span><h3>Fingerlings</h3><p>Healthy tilapia fingerlings for farmers starting or restocking ponds.</p>
-  <div class="price"><strong>MWK 150</strong><span>each</span></div></div>
-</article><article class="product" data-cat="pork">
-  <img src="images/pigs.jpg" alt="Fresh Pork" loading="lazy">
-  <div class="pb"><span class="tag">Pork</span><h3>Fresh Pork</h3><p>Hygienically handled cuts, sold chilled. Bulk orders welcome.</p>
-  <div class="price"><strong>MWK 7,500</strong><span>per kg</span></div></div>
-</article><article class="product" data-cat="pork">
-  <img src="images/pig.jpg" alt="Weaner Piglets" loading="lazy">
-  <div class="pb"><span class="tag">Pork</span><h3>Weaner Piglets</h3><p>Tagged, vaccinated weaners from healthy breeding stock.</p>
-  <div class="price"><strong>MWK 85,000</strong><span>each</span></div></div>
-</article><article class="product" data-cat="pork">
-  <img src="images/pig-housing.jpg" alt="Finisher Pigs (live)" loading="lazy">
-  <div class="pb"><span class="tag">Pork</span><h3>Finisher Pigs (live)</h3><p>Market-weight pigs ready for slaughter or breeding.</p>
-  <div class="price"><strong>MWK 280,000</strong><span>each</span></div></div>
-</article><article class="product" data-cat="bananas">
-  <img src="images/banana-path.jpg" alt="Ripe Bananas" loading="lazy">
-  <div class="pb"><span class="tag">Bananas</span><h3>Ripe Bananas</h3><p>Sweet bananas from our open-air groves, cut to order.</p>
-  <div class="price"><strong>MWK 8,000</strong><span>per bunch</span></div></div>
-</article><article class="product" data-cat="bananas">
-  <img src="images/banana-grove.jpg" alt="Banana Suckers" loading="lazy">
-  <div class="pb"><span class="tag">Bananas</span><h3>Banana Suckers</h3><p>Healthy planting material for your own grove.</p>
-  <div class="price"><strong>MWK 1,500</strong><span>each</span></div></div>
-</article><article class="product" data-cat="crops">
-  <img src="images/tilled-field.jpg" alt="Seasonal Vegetables" loading="lazy">
-  <div class="pb"><span class="tag">Crops</span><h3>Seasonal Vegetables</h3><p>A mixed basket from our rotated vegetable beds.</p>
-  <div class="price"><strong>MWK 3,000</strong><span>per kg</span></div></div>
-</article><article class="product" data-cat="crops">
-  <img src="images/forage.jpg" alt="Farm Compost" loading="lazy">
-  <div class="pb"><span class="tag">Crops</span><h3>Farm Compost</h3><p>Rich, well-rotted compost made from farm by-products.</p>
-  <div class="price"><strong>MWK 5,000</strong><span>per 50 kg bag</span></div></div>
-</article></div>
-
-  <div class="table-wrap"><table class="price-table">
-    <thead><tr><th>Product</th><th>Category</th><th>Unit</th><th>Price</th></tr></thead>
-    <tbody><tr><td>Fresh Chambo (Tilapia)</td><td>Fish</td><td>per kg</td><td>MWK 9,000</td></tr><tr><td>Fresh Catfish</td><td>Fish</td><td>per kg</td><td>MWK 6,500</td></tr><tr><td>Fingerlings</td><td>Fish</td><td>each</td><td>MWK 150</td></tr><tr><td>Fresh Pork</td><td>Pork</td><td>per kg</td><td>MWK 7,500</td></tr><tr><td>Weaner Piglets</td><td>Pork</td><td>each</td><td>MWK 85,000</td></tr><tr><td>Finisher Pigs (live)</td><td>Pork</td><td>each</td><td>MWK 280,000</td></tr><tr><td>Ripe Bananas</td><td>Bananas</td><td>per bunch</td><td>MWK 8,000</td></tr><tr><td>Banana Suckers</td><td>Bananas</td><td>each</td><td>MWK 1,500</td></tr><tr><td>Seasonal Vegetables</td><td>Crops</td><td>per kg</td><td>MWK 3,000</td></tr><tr><td>Farm Compost</td><td>Crops</td><td>per 50 kg bag</td><td>MWK 5,000</td></tr></tbody>
-  </table></div>
-  <p style="text-align:center;margin-top:34px">Bulk or regular orders? <a href="contact.html" style="color:var(--orange);font-weight:600">Get in touch</a> for a quote.</p>
+<header class="nav"><div class="nav-inner">
+<a class="brand" href="index.html" aria-label="Abiti Smart Farm home"><img src="images/logo.jpg" alt="Abiti Smart Farm logo"></a>
+<button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+<nav id="menu" class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="farm.html">Our Farm</a><a href="products.html" class="active">Products</a><a href="sustainability.html">Sustainability</a><a href="community.html">Community</a><a href="gallery.html">Gallery</a><a href="partnerships.html">Partners</a><a href="contact.html">Contact</a><a class="btn btn-sm" href="products.html#enquire">Enquire</a></nav>
+</div></header>
+<section class="page-head"><div class="wrap"><div>
+<p class="crumbs"><a href="index.html">Home</a> / Products</p><h1>Products and Services</h1><p>Vegetables, field crops, local chicks and incubation services. Ask for availability and a quotation.</p></div>
+<div class="arch-img"><img src="images/carrots-basket-2.jpg" alt=""></div></div></section>
+<section class="section" id="enquire"><div class="wrap">
+<div class="tabs"><button class="tab on" data-filter="all">All</button><button class="tab" data-filter="vegetables">Vegetables</button><button class="tab" data-filter="crops">Field crops</button><button class="tab" data-filter="poultry">Poultry</button><button class="tab" data-filter="services">Services</button></div>
+<div class="products"><article class="product" data-cat="vegetables"><div class="imgwrap"><img src="images/carrots-basket.jpg" alt="Carrots" loading="lazy"></div><div class="pb"><span class="tag">Vegetables</span><h3>Carrots</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Carrots">Enquire</a></div></div></article><article class="product" data-cat="vegetables"><div class="imgwrap"><img src="images/tomatoes.jpg" alt="Tomatoes" loading="lazy"></div><div class="pb"><span class="tag">Vegetables</span><h3>Tomatoes</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Tomatoes">Enquire</a></div></div></article><article class="product" data-cat="vegetables"><div class="imgwrap"><img src="images/cabbages.jpg" alt="Cabbages" loading="lazy"></div><div class="pb"><span class="tag">Vegetables</span><h3>Cabbages</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>each</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Cabbages">Enquire</a></div></div></article><article class="product" data-cat="vegetables"><div class="imgwrap"><img src="images/beetroot-bunch.jpg" alt="Beetroot" loading="lazy"></div><div class="pb"><span class="tag">Vegetables</span><h3>Beetroot</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Beetroot">Enquire</a></div></div></article><article class="product" data-cat="vegetables"><div class="imgwrap"><img src="images/leafy-greens.jpg" alt="Leafy Vegetables" loading="lazy"></div><div class="pb"><span class="tag">Vegetables</span><h3>Leafy Vegetables</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per bunch</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Leafy+Vegetables">Enquire</a></div></div></article><article class="product" data-cat="vegetables"><div class="imgwrap"><img src="images/planting-team.jpg" alt="Green Peppers" loading="lazy"></div><div class="pb"><span class="tag">Vegetables</span><h3>Green Peppers</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Green+Peppers">Enquire</a></div></div></article><article class="product" data-cat="vegetables"><div class="ph" role="img" aria-label="Onions: photo coming soon"><span>Photo coming soon</span></div><div class="pb"><span class="tag">Vegetables</span><h3>Onions</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Onions">Enquire</a></div></div></article><article class="product" data-cat="crops"><div class="ph" role="img" aria-label="Maize: photo coming soon"><span>Photo coming soon</span></div><div class="pb"><span class="tag">Field crops</span><h3>Maize</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Maize">Enquire</a></div></div></article><article class="product" data-cat="crops"><div class="ph" role="img" aria-label="Sweet Potatoes: photo coming soon"><span>Photo coming soon</span></div><div class="pb"><span class="tag">Field crops</span><h3>Sweet Potatoes</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Sweet+Potatoes">Enquire</a></div></div></article><article class="product" data-cat="crops"><div class="ph" role="img" aria-label="Beans, Groundnuts and Peas: photo coming soon"><span>Photo coming soon</span></div><div class="pb"><span class="tag">Field crops</span><h3>Beans, Groundnuts and Peas</h3><p>Seasonal availability. Ask us for current stock and a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>per kg</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Beans,+Groundnuts+and+Peas">Enquire</a></div></div></article><article class="product" data-cat="poultry"><div class="imgwrap"><img src="images/chicks.jpg" alt="Mikolongwe Local Chicks" loading="lazy"></div><div class="pb"><span class="tag">Poultry</span><h3>Mikolongwe Local Chicks</h3><p>Local chicks from day-old to four weeks old, subject to availability. Call or WhatsApp 0991 295 046 to enquire.</p>
+<div class="price"><strong>Price on request</strong><span>per chick</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Mikolongwe+Local+Chicks">Enquire</a></div></div></article><article class="product" data-cat="services"><div class="imgwrap"><img src="images/incubator.jpg" alt="Poultry Incubation Service" loading="lazy"></div><div class="pb"><span class="tag">Services</span><h3>Poultry Incubation Service</h3><p>We incubate eggs for other farmers and help make local poultry more accessible. Ask for a quotation.</p>
+<div class="price"><strong>Price on request</strong><span>quotation</span></div>
+<div style="margin-top:14px"><a class="btn btn-sm" href="contact.html?item=Poultry+Incubation+Service">Enquire</a></div></div></article></div>
+<p class="notice" style="margin-top:34px">Availability is seasonal and chicks are subject to availability. Tap Enquire on any item, or <a href="contact.html" style="color:var(--carrot-deep);font-weight:700">contact us</a> directly for a quotation.</p>
 </div></section>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div><img src="images/logo.jpg" alt="Abiti Smart Farm" style="height:72px;margin-bottom:10px"><p>Growing smarter. Feeding the future.</p></div>
-      <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
-      <div><h4>Contact</h4><p>+265 999 000 000<br>info@abitismartfarm.com<br>Malawi</p></div>
-    </div>
-    <div class="footer-inner"><p>&copy; <span id="year"></span> Abiti Smart Farm. All rights reserved.</p><p>Preview draft &bull; sample content</p></div>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap">
+<p class="footer-big">Growing <em>smarter</em>.<br>Feeding the future.</p>
+<div class="footer-top">
+<div><img src="images/logo.jpg" alt="Abiti Smart Farm" style="height:72px;margin-bottom:10px"><p>Growing food. Growing opportunities. Growing together.</p></div>
+<div><h4>Explore</h4><a href="about.html">About</a><a href="farm.html">Our Farm</a><a href="products.html">Products and Services</a><a href="sustainability.html">Sustainability</a><a href="community.html">Community</a><a href="gallery.html">Gallery</a><a href="partnerships.html">Partnerships</a><a href="contact.html">Contact</a></div>
+<div><h4>Get in touch</h4><p>Thandaza area, Mzuzu, Malawi</p><a href="tel:+265991295046">0991 295 046</a><a href="mailto:abitismartfarms@gmail.com">abitismartfarms@gmail.com</a><a href="https://wa.me/265991295046" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.tiktok.com/@abiti.farm" target="_blank" rel="noopener">TikTok @abiti.farm</a></div>
+</div>
+<div class="footer-inner"><p>&copy; <span id="year"></span> Abiti Smart Farm. All rights reserved.</p><p>Website preview</p></div>
+</div></footer>
 <script src="script.js"></script>
 </body>
 </html>
