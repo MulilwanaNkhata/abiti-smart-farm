@@ -391,6 +391,63 @@ a.fb { transition: transform .3s, box-shadow .3s; } a.fb:hover { transform: tran
 .band .hero-cta { justify-content: center; }
 .fb.wa .n { color: #06361a; }
 
+/* ---------- Phone polish ---------- */
+@media (max-width: 760px) {
+  body { font-size: 1rem; }
+  .wrap { width: min(1200px, 100% - 32px); }
+  .section { padding: 52px 0; }
+  .section-head { margin-bottom: 28px; }
+  h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .btn { padding: 13px 22px; min-height: 46px; }
+  .btn-sm { min-height: 44px; padding: 11px 20px; }
+  .tab { min-height: 42px; padding: 9px 18px; }
+  .hero { padding-top: 112px; }
+  .hero h1 { font-size: clamp(2.6rem, 13vw, 3.6rem); margin-bottom: 18px; }
+  .hero-grid { padding-bottom: 44px; gap: 30px; }
+  .hero-cta .btn { flex: 1 1 auto; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; padding-top: 18px; font-size: .8rem; }
+  .facts b { font-size: 1.25rem; }
+  .collage { aspect-ratio: 1 / .95; max-width: 420px; }
+  .pol { padding: 7px 7px 30px; }
+  .pol span { font-size: .68rem; left: 10px; bottom: 8px; }
+  .sticker { width: 84px; height: 84px; font-size: .66rem; }
+  .collage .sticker { right: 36%; top: 38%; }
+  .marquee span { font-size: 1.05rem; padding: 11px 0; }
+  .band { min-height: 0; padding: 64px 0; }
+  .band-stats { gap: 18px 30px; }
+  .band-stats b { font-size: 2.6rem; }
+  .bento { grid-auto-rows: 170px; }
+  .elastic .el { height: 66px; border-radius: 20px; }
+  .elastic .el.on { height: 300px; }
+  .fbento { gap: 10px; grid-auto-rows: minmax(130px, auto); }
+  .fb { padding: 20px; border-radius: 18px; }
+  .fb h3 { font-size: 1.25rem; }
+  .fb.photo h3 { font-size: 1.5rem; }
+  .fb .big { font-size: 3rem; }
+  .fb.a, .fb.sp3.photo { min-height: 260px; }
+  .products { gap: 16px; }
+  .quote-block { padding: 64px 0; }
+  .quote-block::before { font-size: 12rem; }
+  .page-head { padding: 112px 0 46px; }
+  .page-head .wrap { gap: 26px; }
+  .page-head h1 { font-size: clamp(2.2rem, 11vw, 3rem); }
+  .page-head .mini { display: block; height: 230px; max-width: 320px; margin-inline: auto; justify-self: center; }
+  .gallery { columns: 2 140px; column-gap: 10px; }
+  .g { margin-bottom: 10px; border-radius: 16px; }
+  .g figcaption { opacity: 1; font-size: .72rem; padding: 22px 10px 8px; }
+  .enterprise { padding: 22px 0; gap: 20px; }
+  .form { padding: 22px; border-radius: 22px; }
+  .footer { padding: 52px 0 24px; padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
+  .footer-big { font-size: 2.1rem; margin-bottom: 28px; }
+  .footer-top { gap: 26px; }
+  .footer-top a { padding: 4px 0; }
+  .wa-float { width: 50px; height: 50px; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); }
+  .wa-float svg { width: 26px; height: 26px; }
+  .lb-nav { width: 44px; height: 44px; }
+  .lb-nav.prev { left: 8px; } .lb-nav.next { right: 8px; }
+}
+@media (max-width: 380px) { .hero h1 { font-size: 2.4rem; } .hero-cta .btn { width: 100%; } }
+
 .tab { font-family: var(--f-body); }
 
 [hidden] { display: none !important; }

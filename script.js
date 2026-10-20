@@ -76,3 +76,22 @@ if (par.length && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const upd = () => { par.forEach(p => p.style.setProperty('--py', (scrollY * p.dataset.speed) + 'px')); queued = false; };
   addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(upd); } }, { passive: true });
 }
+
+// Close the phone menu when tapping outside it
+document.addEventListener('click', e => {
+  if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !(menuBtn && menuBtn.contains(e.target))) {
+    menu.classList.remove('open'); if (menuBtn) menuBtn.setAttribute('aria-expanded', false);
+  }
+});
+
+// Swipe left/right in the photo viewer
+(function () {
+  const box = document.getElementById('lightbox'); if (!box) return;
+  let x0 = null;
+  box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) box.querySelector(dx < 0 ? '.next' : '.prev').click();
+  });
+})();
