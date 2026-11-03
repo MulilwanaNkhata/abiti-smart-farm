@@ -294,6 +294,58 @@ if (ticker && !reduceMotion) {
   wrap.appendChild(btn);
 }
 
+
+/* ---------- Hero motion ----------
+   Skipped entirely for visitors who prefer reduced motion. The headline keeps its real text
+   (each word is only wrapped in a span), so screen readers and search engines read it unchanged. */
+const hx = document.querySelector('.hx');
+const heroH1 = hx && hx.querySelector('h1');
+if (hx && heroH1 && !reduceMotion) {
+  let wi = 0;
+  const wrapWords = node => {
+    [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        let text = n.textContent;
+        // punctuation straight after an element's last word (the comma after the italic word) rides with that word,
+        // so it can never wrap onto a line of its own
+        const lead = text.match(/^[.,;:!?)\]}'"\u2019\u201d\u2026\u2014-]+/);
+        const prev = n.previousSibling;
+        if (lead && prev && prev.nodeType === 1) {
+          const spans = prev.querySelectorAll('.w > span');
+          if (spans.length) {
+            const pn = document.createElement('span'); pn.className = 'pn'; pn.textContent = lead[0];
+            spans[spans.length - 1].appendChild(pn); text = text.slice(lead[0].length);
+          }
+        }
+        const frag = document.createDocumentFragment();
+        text.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          const outer = document.createElement('span'), inner = document.createElement('span');
+          outer.className = 'w'; inner.textContent = part; inner.style.setProperty('--wi', wi++);
+          outer.appendChild(inner); frag.appendChild(outer);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1 && n.tagName !== 'BR') { wrapWords(n); }
+    });
+  };
+  wrapWords(heroH1);
+  heroH1.classList.add('words-split');
+  hx.classList.add('motion');
+  // Pointer depth: only for a real mouse, one write per frame, and only while the hero is on screen.
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let tx = 0, ty = 0, queued = false;
+    const apply = () => { hx.style.setProperty('--mx', tx.toFixed(3)); hx.style.setProperty('--my', ty.toFixed(3)); queued = false; };
+    hx.addEventListener('pointermove', e => {
+      const r = hx.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width - .5) * 2; ty = ((e.clientY - r.top) / r.height - .5) * 2;
+      if (!queued) { queued = true; requestAnimationFrame(apply); }
+    });
+    hx.addEventListener('pointerleave', () => { tx = 0; ty = 0; if (!queued) { queued = true; requestAnimationFrame(apply); } });
+  }
+}
+
+
 /* ---------- Abiti Integrated Farm Ecosystem ----------
    One list of activities and links draws the diagram on every page that has [data-eco].
    Following the owner's brief, every link is a proposed or developing practice, never a fully
