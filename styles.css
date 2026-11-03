@@ -743,3 +743,20 @@ main p a:not(.btn), .crumbs a { text-decoration: underline; text-underline-offse
 }
 .badge + .eyebrow { display: flex; margin-bottom: 8px; }
 @media (max-width: 560px) { .eco-map { margin-top: 22px; } }
+
+/* founder profile: the background-removed portrait stands inside a forest-green arch,
+   which also hides the faint dark edge left from the original studio backdrop */
+.founder { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(32px, 6vw, 90px); align-items: center; }
+.founder-photo { position: relative; justify-self: center; width: 100%; max-width: 460px; margin: 0 0 30px; padding-top: 8%; border-radius: 999px 999px var(--radius) var(--radius); background: radial-gradient(70% 45% at 50% 30%, rgba(227, 167, 47, .38), transparent 70%), radial-gradient(120% 90% at 50% 0%, var(--forest-2), var(--forest)); box-shadow: 0 30px 60px -30px rgba(14, 42, 28, .55); overflow: visible; }
+.founder-photo img { display: block; width: 100%; height: auto; border-radius: 0 0 var(--radius) var(--radius); }
+.founder-photo figcaption { position: absolute; left: 50%; bottom: -26px; transform: translateX(-50%); display: grid; gap: 2px; padding: 12px 22px; border-radius: 16px; background: rgba(255, 255, 255, .94); box-shadow: 0 16px 34px -16px rgba(14, 42, 28, .45); text-align: center; white-space: nowrap; }
+.founder-photo figcaption b { font: 700 1.02rem/1.2 var(--f-display); color: var(--forest); }
+.founder-photo figcaption span { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-deep); }
+.founder-role { margin-top: -8px; font-weight: 600; color: var(--gold-deep); }
+.founder-facts { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; }
+.founder-facts li { padding: 14px 18px; border-radius: 16px; background: var(--cream); border-left: 4px solid var(--gold); font-size: .95rem; color: var(--ink); }
+.founder-facts b { display: block; margin-bottom: 2px; font: 700 .74rem var(--f-body); letter-spacing: .14em; text-transform: uppercase; color: var(--forest-2); }
+@media (max-width: 860px) {
+  .founder { grid-template-columns: 1fr; }
+  .founder-photo { max-width: 340px; }
+}
